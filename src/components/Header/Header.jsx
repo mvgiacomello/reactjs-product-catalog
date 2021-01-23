@@ -1,13 +1,14 @@
-const Header = () => {
+const Header = ({ text }) => {
     const style = {
-        'color': 'white',
-        'margin-bottom': '20px',
-        'font-size': '25px'
+        color: 'white',
+        marginTop: '10px',
+        marginBottom: '20px',
+        fontSize: '25px'
     }
 
     return (
         <header style={style}>
-            <h1>Product Catalog</h1>
+            <h1>{text}</h1>
         </header>
     )
 }

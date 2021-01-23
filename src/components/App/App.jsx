@@ -1,22 +1,33 @@
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from '../Header/Header'
 import ProductGrid from '../ProductGrid/ProductGrid'
 import Footer from '../Footer/Footer'
+import ProductDetails from '../ProductDetails/ProductDetails'
 
 
 function App() {
   const style = {
-    'text-align': 'center',
-    'border': 'solid 1px',
-    'border-radius': '7px',
-    'padding': '10px'
+    textAlign: 'center',
+    border: 'solid 1px #49FFD0',
+    borderRadius: '7px',
+    padding: '10px'
   }
 
   return (
-    <div style={style} className="App">
-      <Header />
-      <ProductGrid />
-      <Footer />
-    </div>
+    <Router>
+      <div style={style} className="App">
+        <Route path='/' exact render={(props) => (
+          <>
+            <Header text='Product Catalog' />
+            <section>
+              <ProductGrid />
+            </section>
+          </>
+        )} />
+        <Route path='/product/:productId' component={ProductDetails} />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

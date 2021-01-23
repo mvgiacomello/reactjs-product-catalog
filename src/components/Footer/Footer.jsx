@@ -1,8 +1,8 @@
 const Footer = () => {
     const style = {
-        'color': 'white',
-        'margin-top': '20px',
-        'font-size': '10px'
+        color: 'white',
+        marginTop: '20px',
+        fontSize: '10px'
     }
 
     return (
