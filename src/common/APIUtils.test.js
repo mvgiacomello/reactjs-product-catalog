@@ -1,4 +1,5 @@
-import { retrieveProducts, retrieveProduct } from './APIUtil'
+import '@testing-library/jest-dom';
+import { retrieveProducts, retrieveProduct } from './APIUtils'
 
 test('Retrieve Product List API call is defined', () => {
     expect(retrieveProducts).toBeDefined();
