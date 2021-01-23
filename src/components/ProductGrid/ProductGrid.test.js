@@ -13,8 +13,8 @@ const dummyResponse = [
         'description': 'Dummy Description',
         'artist': 'Dummy Artist',
         'isFree': false,
-        'image1': 'https://d17jafawxl91z1.cloudfront.net/MVR_FDC_L0103_App_Hero-1607341456001.jpg',
-        'image2': 'https://d17jafawxl91z1.cloudfront.net/MVR_FDC_L0103_App_Square-1607341456001.jpg',
+        'image1': 'data:image/png;base64,aa',
+        'image2': 'data:image/png;base64,aa',
         'accentColor': '#000000',
         'backgroundColor': '#000000',
         'textColor': '#000000',
@@ -34,7 +34,7 @@ afterEach(() => server.resetHandlers())
 afterAll(() => server.close())
 
 
-test('renders ProductGrid with Title', async () => {
+test('renders ProductGrid a product with Title', async () => {
     render(<Router><ProductGrid /></Router>);
     await waitFor(() => screen.getByText(dummyResponse[0].title))
     const element = screen.getByText(dummyResponse[0].title);
