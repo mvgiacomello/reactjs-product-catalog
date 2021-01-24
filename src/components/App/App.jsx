@@ -3,6 +3,7 @@ import Header from '../Header/Header'
 import ProductGrid from '../ProductGrid/ProductGrid'
 import Footer from '../Footer/Footer'
 import ProductDetails from '../ProductDetails/ProductDetails'
+import ProductCarousel from '../ProductCarousel/ProductCarousel'
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
     textAlign: 'center',
     border: 'solid 1px #49FFD0',
     borderRadius: '7px',
-    padding: '10px'
+    padding: '10px',
   }
 
   return (
@@ -19,6 +20,9 @@ function App() {
         <Route path='/' exact render={(props) => (
           <>
             <Header text='Product Catalog' />
+            <section>
+              <ProductCarousel />
+            </section>
             <section>
               <ProductGrid />
             </section>

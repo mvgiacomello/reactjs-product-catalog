@@ -24,9 +24,11 @@ const ProductGridItem = ({ id, title, price, thumbnail, backgroundColor, accentC
         borderRadius: '2px',
     }
 
+
+
     return (
         <Link to={`/product/${id}`}>
-            <div style={style}>
+            <div style={style} >
                 <img src={thumbnail} style={imgStyle} alt={title} />
                 <p>{title}</p>
                 <p style={priceStyle}>£ {price}</p>

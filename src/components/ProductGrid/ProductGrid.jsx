@@ -7,7 +7,7 @@ const ProductGrid = () => {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
         rowGap: '20px',
-        columnGap: '20px'
+        columnGap: '20px',
     }
 
     const [products, setProducts] = useState([])
