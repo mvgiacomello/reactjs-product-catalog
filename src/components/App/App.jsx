@@ -4,6 +4,8 @@ import ProductGrid from '../ProductGrid/ProductGrid'
 import Footer from '../Footer/Footer'
 import ProductDetails from '../ProductDetails/ProductDetails'
 import ProductCarousel from '../ProductCarousel/ProductCarousel'
+import { useState, useEffect } from 'react'
+import { retrieveProducts } from '../../common/APIUtils'
 
 
 function App() {
@@ -14,6 +16,16 @@ function App() {
     padding: '10px',
   }
 
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    const getProducts = async () => {
+      const productsFromServer = await retrieveProducts()
+      setProducts(productsFromServer)
+    }
+    getProducts()
+  }, [])
+
   return (
     <Router>
       <div style={style} className='App'>
@@ -21,10 +33,10 @@ function App() {
           <>
             <Header text='Product Catalog' />
             <section>
-              <ProductCarousel />
+              <ProductCarousel products={products} />
             </section>
             <section>
-              <ProductGrid />
+              <ProductGrid products={products} />
             </section>
           </>
         )} />

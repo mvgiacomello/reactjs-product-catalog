@@ -1,24 +1,12 @@
-import { useState, useEffect } from 'react'
 import ProductGridItem from '../ProductGridItem/ProductGridItem'
-import { retrieveProducts } from '../../common/APIUtils'
 
-const ProductGrid = () => {
+const ProductGrid = ({ products }) => {
     const style = {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
         rowGap: '20px',
         columnGap: '20px',
     }
-
-    const [products, setProducts] = useState([])
-
-    useEffect(() => {
-        const getProducts = async () => {
-            const productsFromServer = await retrieveProducts()
-            setProducts(productsFromServer)
-        }
-        getProducts()
-    }, [])
 
     return (
         <div style={style}>

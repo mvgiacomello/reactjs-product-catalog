@@ -1,19 +1,9 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
-import { useState, useEffect } from 'react'
-import { retrieveProducts } from '../../common/APIUtils'
 import { Link } from 'react-router-dom'
 
-const ProductCarousel = () => {
-    const [products, setProducts] = useState([])
+const ProductCarousel = ({ products }) => {
 
-    useEffect(() => {
-        const getProducts = async () => {
-            const productsFromServer = await retrieveProducts()
-            setProducts(productsFromServer)
-        }
-        getProducts()
-    }, [])
 
     const carouselStyle = {
         width: 'auto',
