@@ -4,6 +4,6 @@ import Header from './Header'
 
 test('renders Header', () => {
     render(<Header text='Foo' />)
-    const element = screen.getByText(/Foo/i)
+    const element = screen.getByText('Foo')
     expect(element).toBeInTheDocument()
 });

@@ -14,6 +14,6 @@ test('renders ProductDetails', () => {
             <ProductDetails history={history} />
         </Router>
     );
-    const element = screen.getByText(/Return/i)
+    const element = screen.getByText('Return')
     expect(element).toBeInTheDocument()
 });
