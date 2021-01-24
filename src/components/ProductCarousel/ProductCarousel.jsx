@@ -1,5 +1,5 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+import { Carousel } from 'react-responsive-carousel'
 import { useState, useEffect } from 'react'
 import { retrieveProducts } from '../../common/APIUtils'
 import { Link } from 'react-router-dom'

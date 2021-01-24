@@ -39,4 +39,4 @@ test('renders ProductCarousel a product with Title', async () => {
     await waitFor(() => screen.getAllByText(dummyResponse[0].title))
     const element = screen.getAllByText(dummyResponse[0].title)
     expect(element[0]).toBeInTheDocument()
-});
+})

@@ -1,9 +1,9 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom'
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { render, screen, waitFor } from '@testing-library/react';
-import ProductGrid from './ProductGrid';
+import { render, screen, waitFor } from '@testing-library/react'
+import ProductGrid from './ProductGrid'
 
 const ENDPOINT = process.env.ENDPOINT || 'https://demo4690370.mockable.io'
 const dummyResponse = [
@@ -37,6 +37,6 @@ afterAll(() => server.close())
 test('renders ProductGrid a product with Title', async () => {
     render(<Router><ProductGrid /></Router>);
     await waitFor(() => screen.getByText(dummyResponse[0].title))
-    const element = screen.getByText(dummyResponse[0].title);
-    expect(element).toBeInTheDocument();
-});
+    const element = screen.getByText(dummyResponse[0].title)
+    expect(element).toBeInTheDocument()
+})
