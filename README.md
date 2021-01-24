@@ -1,6 +1,6 @@
 # ReactJS Product Catalog
 
-A product catalog using react.js, create-react-app and javascript. Styles are stored per-component. Tests are stored within each component's folder.
+A product catalog using react.js, create-react-app and javascript. Styles are per-react-component. Tests are stored within each component's folder.
 
 ## Screens
 
