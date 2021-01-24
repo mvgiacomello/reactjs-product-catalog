@@ -2,10 +2,17 @@
 
 A product catalog using react.js, create-react-app and javascript. Styles are stored per-component. Tests are stored within each component's folder.
 
+<img src="screenshot1.png"
+     alt="Catalog"
+     style="width: 45%; margin-right: 5%;" />
+<img src="screenshot2.png"
+     alt="Catalog"
+     style="width: 45%;" />
+
 ## Pre-requisites
 
 - [node && npm (bundled with node)](https://nodejs.org/en/)
-- Environment variable `ENDPOINT` set with base url of backend; a default is set in the `APIUtils.js` but it might not work. Sample responses are stored in the `APIUtilsSamples.js`.
+- Environment variable `ENDPOINT` set with base url of backend; a default is set in the `APIUtils.js` but it might not be up all the time. Sample responses are stored in the `APIUtilsSamples.js`.
 
 ## Available Scripts
 
