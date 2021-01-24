@@ -5,6 +5,7 @@ A product catalog using react.js, create-react-app and javascript. Styles are st
 ## Pre-requisites
 
 - [node && npm (bundled with node)](https://nodejs.org/en/)
+- Environment variable `ENDPOINT` set with base url of backend; a default is set in the `APIUtils.js` but it might not work. Sample responses are stored in the `APIUtilsSamples.js`.
 
 ## Available Scripts
 

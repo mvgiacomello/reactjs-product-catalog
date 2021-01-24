@@ -1,15 +1,29 @@
 const ENDPOINT = process.env.ENDPOINT || 'https://demo4690370.mockable.io'
 
 async function retrieveProducts() {
-    const response = await fetch(`${ENDPOINT}/products`)
-    const jsonBody = await response.json()
-    return jsonBody
+    try {
+        const response = await fetch(`${ENDPOINT}/products`)
+        const jsonBody = await response.json()
+        return jsonBody
+    } catch (error) {
+        return [{
+            'error': 'Unable to retrieve products',
+            'more': JSON.stringify(error)
+        }]
+    }
 }
 
 async function retrieveProduct(id) {
-    const response = await fetch(`${ENDPOINT}/products/${id}`)
-    const jsonBody = await response.json()
-    return jsonBody
+    try {
+        const response = await fetch(`${ENDPOINT}/products/${id}`)
+        const jsonBody = await response.json()
+        return jsonBody
+    } catch (error) {
+        return [{
+            'error': `Unable to retrieve product id ${id}`,
+            'more': JSON.stringify(error)
+        }]
+    }
 }
 
 export { retrieveProducts, retrieveProduct }
