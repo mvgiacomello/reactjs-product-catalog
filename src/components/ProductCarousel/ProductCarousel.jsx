@@ -1,4 +1,4 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import { useState, useEffect } from 'react'
 import { retrieveProducts } from '../../common/APIUtils'
@@ -39,7 +39,7 @@ const ProductCarousel = () => {
                         products.sort((a, b) => a.feature_order - b.feature_order).map(product => (
                             <Link to={`/product/${product.id}`} key={product.id}>
                                 <img src={product.image1} alt={product.description} style={imgStyle(product.backgroundColor)} />
-                                <p className="legend">{product.title}</p>
+                                <p className='legend'>{product.title}</p>
                             </Link>
                         ))
                     }

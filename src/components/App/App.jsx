@@ -16,7 +16,7 @@ function App() {
 
   return (
     <Router>
-      <div style={style} className="App">
+      <div style={style} className='App'>
         <Route path='/' exact render={(props) => (
           <>
             <Header text='Product Catalog' />
