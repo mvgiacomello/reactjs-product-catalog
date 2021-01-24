@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import { Link } from 'react-router-dom'
 
-const ProductCarousel = ({ products }) => {
 
+const ProductCarousel = ({ products }) => {
 
     const carouselStyle = {
         width: 'auto',
@@ -40,6 +41,10 @@ const ProductCarousel = ({ products }) => {
         console.log(error)
     }
 
+}
+
+ProductCarousel.propTypes = {
+    products: PropTypes.array
 }
 
 export default ProductCarousel

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import ProductGridItem from '../ProductGridItem/ProductGridItem'
 
 const ProductGrid = ({ products }) => {
@@ -27,6 +28,10 @@ const ProductGrid = ({ products }) => {
             ))}
         </div>
     )
+}
+
+ProductGrid.propTypes = {
+    products: PropTypes.array
 }
 
 export default ProductGrid

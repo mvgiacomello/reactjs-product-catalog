@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 const ProductGridItem = ({ id, title, price, thumbnail, backgroundColor, accentColor, textColor }) => {
@@ -35,6 +36,16 @@ const ProductGridItem = ({ id, title, price, thumbnail, backgroundColor, accentC
             </div>
         </Link>
     )
+}
+
+ProductGridItem.propTypes = {
+    id: PropTypes.number,
+    title: PropTypes.string,
+    price: PropTypes.string,
+    thumbnail: PropTypes.string,
+    backgroundColor: PropTypes.string,
+    accentColor: PropTypes.string,
+    textColor: PropTypes.string,
 }
 
 export default ProductGridItem
