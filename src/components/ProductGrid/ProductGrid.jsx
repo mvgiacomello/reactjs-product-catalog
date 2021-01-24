@@ -31,7 +31,7 @@ const ProductGrid = ({ products }) => {
 }
 
 ProductGrid.propTypes = {
-    products: PropTypes.array
+    products: PropTypes.array.isRequired
 }
 
 export default ProductGrid

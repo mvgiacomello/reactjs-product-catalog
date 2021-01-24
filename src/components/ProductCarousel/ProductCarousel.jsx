@@ -44,7 +44,7 @@ const ProductCarousel = ({ products }) => {
 }
 
 ProductCarousel.propTypes = {
-    products: PropTypes.array
+    products: PropTypes.array.isRequired
 }
 
 export default ProductCarousel

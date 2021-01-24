@@ -39,13 +39,13 @@ const ProductGridItem = ({ id, title, price, thumbnail, backgroundColor, accentC
 }
 
 ProductGridItem.propTypes = {
-    id: PropTypes.number,
-    title: PropTypes.string,
-    price: PropTypes.string,
-    thumbnail: PropTypes.string,
-    backgroundColor: PropTypes.string,
-    accentColor: PropTypes.string,
-    textColor: PropTypes.string,
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    thumbnail: PropTypes.string.isRequired,
+    backgroundColor: PropTypes.string.isRequired,
+    accentColor: PropTypes.string.isRequired,
+    textColor: PropTypes.string.isRequired,
 }
 
 export default ProductGridItem
