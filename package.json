@@ -17,8 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "echo 'Do not try this now.'"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
