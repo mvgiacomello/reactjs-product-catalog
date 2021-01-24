@@ -2,12 +2,9 @@
 
 A product catalog using react.js, create-react-app and javascript. Styles are stored per-component. Tests are stored within each component's folder.
 
-<img src="screenshot1.png"
-     alt="Catalog"
-     style="width: 45%; margin-right: 5%;" />
-<img src="screenshot2.png"
-     alt="Catalog"
-     style="width: 45%;" />
+## Screens
+
+![Catalog and details](./system.gif)
 
 ## Pre-requisites
 
