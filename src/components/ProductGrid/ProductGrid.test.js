@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import ProductGrid from './ProductGrid'
 
 const dummyProducts = [
@@ -22,7 +22,6 @@ const dummyProducts = [
 
 test('renders ProductGrid a product with Title', async () => {
     render(<Router><ProductGrid products={dummyProducts} /></Router>);
-    await waitFor(() => screen.getByText(dummyProducts[0].title))
     const element = screen.getByText(dummyProducts[0].title)
     expect(element).toBeInTheDocument()
 })

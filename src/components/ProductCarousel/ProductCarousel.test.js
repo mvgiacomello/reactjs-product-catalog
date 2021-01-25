@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import ProductCarousel from './ProductCarousel'
 
 const dummyProducts = [
@@ -22,7 +22,6 @@ const dummyProducts = [
 
 test('renders ProductCarousel a product with Title', async () => {
     render(<Router><ProductCarousel products={dummyProducts} /></Router>);
-    await waitFor(() => screen.getAllByText(dummyProducts[0].title))
     const element = screen.getAllByText(dummyProducts[0].title)
     expect(element[0]).toBeInTheDocument()
 })
